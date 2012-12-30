@@ -93,12 +93,13 @@ def look_for_bills_lobbied():
         infile = open(file)
         lobbyist = file.split('/')[1]
         keep_going = False
-        #for line in infile:
-        for line in lines:
+        for line in infile:
             if keep_going == False:
                 if re.search(r'Schedule\W+F625', line.strip()):
                     print '%s\t%s' % (lobbyist, line.strip())
                     keep_going = True
+            elif keep_going == True:
+                print line
             elif line == '\n':
                 keep_going = False
             else:
