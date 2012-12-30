@@ -104,3 +104,25 @@ def look_for_bills_lobbied():
             else:
                 print '%s\t%s' % (lobbyist, line.strip())
         infile.close()
+
+def do_it_do_it():
+    try:
+        set_up()
+        print 'set up the directories and downloaded all the disclosure reports'
+    except:
+        print 'failed while trying to set_up'
+    try:
+        textify()
+        print 'ripped the text out of the PDF files'
+    except:
+        print 'failed while trying to get the text out of the PDFs'
+    
+    print 'SEARCHING FOR BILLS LOBBIED\n\n'
+    
+    try:
+        look_for_bills_lobbied()
+    except:
+        print 'failed while trying to find bills lobbied'
+
+if __name__ == '__main__':
+    do_it_do_it()
