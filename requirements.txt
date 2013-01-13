@@ -2,4 +2,3 @@ requests
 ipython
 csvkit
 hg+http://code.google.com/p/python-nameparser/
-pandas
