@@ -17,13 +17,10 @@ It's worth putting in the week of time to script a hard task instead of the 4 da
 So you've heard about python or ruby or perl and are curious. But you're not sure how it really fits into your toolbox. I'd argue that CAR reporters should utilize some programming chops to work more efficiently and effectively, delegating the boring, repetitive and time intensive work to computers.
 
 Sample scripting tasks:
-1. Cycle through folders of shapefiles and write out the missing projection files.
 
-1. Cycle through foreclosed properties and query the voter registration database for phone
-numbers of the owners.
-
-1. Turn a bunch of PDFs into text and search through them all.
-
+1. Cycle through folders of shapefiles and write out the missing projection files.  
+1. Cycle through foreclosed properties and query the voter registration database for phone numbers of the owners.  
+1. Turn a bunch of PDFs into text and search through them all.  
 1. Bust up all the worksheets in a folder full of Excel files.
 
 All of the above tasks would take a lot of time to do by hand on a large scale, but using a computer program makes short work of the tasks. Not to mention it reduces the errors that creep in when doing boring, repetitive tasks by hand.
