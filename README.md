@@ -45,19 +45,19 @@ I don't use Windows anymore so I'll be talking about "terminal" commands. On uni
 Couple quick conventions.
 
 * When you see a dollar sign it indicates a terminal prompt. So a command to see what directory you are in on your computer would be noted like so:
-``$ pwd``
+```$ pwd```
 The "$" indicates that at the command prompt, you enter "pwd" and hit enter.
 
 * When you see a pound sign it indicates a comment. I will try to comment as much as I can on terminal commands and python code so that you know what's going on. So, taking the above example, here's how I will write out comments from now on.
 
 $ pwd # print your current working directory so you know where you are in the file system. Here are the commands you'll use a lot:
-``
+```
 cd directory_name # move into a folder called directory_name
 wc -l file_name # return the number of lines in a file called file_name
 pwd # print your current working directory
 head -n 100 file_name # show the beginning 100 lines of file_name
 tail -n 100 file_name # show the last 100 lines of file_name.
-``
+```
 
 But get the guide. It will help lower your frustration level as you're starting out.
 
@@ -75,22 +75,22 @@ Once I installed Ubuntu using VirtualBox, I fired up my new virtual machine and 
 
 The "which" command tells you where and if a terminal program is installed. Let's check the default Ubuntu install to see what's already available to us.
 
-``
+```
 $ which python # check that python is installed and it is.
 
 $ which easy_install # check that python setuptools is installed. It is not.
-``
+```
 
 Ubuntu has an amazingly simple to use package manager that installs software. You can use the package manager from the command line or from the Software Center program.
 
-``
+```
 $ sudo apt-get install python-setuptools # install pyhton setuptools
 $ sudo easy_install virtualenv # use the easy_install program to install virtualenv
 $ sudo apt-get install sqlite # install sqlite
 $ sudo apt-get install mercurial # install the mercurial versioning system to install the nameparser module. I would use MacPorts or Homebrew to do this on a Mac.
 
 $ sudo apt-get install python-tk # for Ubuntu users, this allows us to cut and paste into Ipython
-``
+```
 
 The python virtualenv module lets us set-up a self-contained python programming environment that's isolated from the rest of the system. Let's create one now.
 
