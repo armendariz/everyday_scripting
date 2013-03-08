@@ -39,7 +39,7 @@ You can also use a program like virtualbox to install Ubuntu and play around wit
 ## The command line AKA terminal
 I don't use Windows anymore so I'll be talking about "terminal" commands. On unix-like systems the terminal is the command line. I recommend getting a copy of the "Linux Pocket Guide," by Daniel J. Barrett. It's a great desk reference and beginner's guide to navigating the terminal.
 
-Couple quick conventions.
+Couple quick conventions:
 
 * When you see a dollar sign it indicates a terminal prompt. So a command to see what directory you are in on your computer would be noted like so:
 
@@ -70,7 +70,7 @@ I started out using Perl for programming tasks, but now I pretty much exclusivel
 
 Finally, Ipython makes it really easy to play around with data and perform other programming tasks. The main author of the pandas stats module wrote a book about using python for data analysis, and there is a whole chapter on using Ipython for data exploration. I highly recommend getting the book.
 
-## Getting Started
+## Getting started
 I'm going to install Ubuntu 12.04.1 on my Mac using VirtualBox and set it up for this tutorial. If you decide to use a virtual machine, you can fire up your virtual machine and follow right along.
 
 Once I installed Ubuntu using VirtualBox, I fired up my new virtual machine and popped open the terminal and did the following commands.
