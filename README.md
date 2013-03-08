@@ -2,8 +2,8 @@
 
 A NICAR class to to get CAR reporters hooked on programming
 
-Agustin Armendariz
-aarmendariz@cironline.org
+Agustin Armendariz  
+aarmendariz@cironline.org  
 510.809.3173
 
 This tutorial is intended for CAR reporters interested in adding some programming chops to their toolbox. I am no programmer, but I do some scripting every day to get work done faster and better.
@@ -278,16 +278,23 @@ Here are some resources to learn more and help you understand how python works. 
 Just working through the first three chapters of this book will help a ton as you get started.
 
 "Think Python. How to Think Like a Computer Scientist," by Allen B. Downey http://www.greenteapress.com/thinkpython/
-"Think Stats. Probability and Statistics for Programmers," by Allen B. Downey, published by O'Reilly Media.
 
-http://www.greenteapress.com/thinkstats/
+"Think Stats. Probability and Statistics for Programmers," by Allen B. Downey, published by O'Reilly Media. http://www.greenteapress.com/thinkstats/
+
 Browse the python code on GitHub and play around with it. I think I've solved most if not all of my problems by using something I found on GitHub, in a book or through a random Google search.
 
 In particular, Ben Welsh's page is amazingly useful. Both his personal and professional one.
 
-https://github.com/palewire https://github.com/datadesk
+https://github.com/palewire
+
+https://github.com/datadesk
+
 There are a ton of smart and helpful people on GitHub and this is just a quick sampling of who I pay attention to.
 
-https://github.com/lukerosiak https://github.com/sunlightlabs https://github.com/aplayford
+https://github.com/lukerosiak
 
-Stack Overflow is a great resource for answeres to most problems you'll run into. Search it if you hit a wall. http://stackoverflow.com/
+https://github.com/sunlightlabs
+
+https://github.com/aplayford
+
+Stack Overflow is a great resource for answers to most problems you'll run into. Search it if you hit a wall. http://stackoverflow.com/
