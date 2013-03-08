@@ -25,7 +25,7 @@ Sample scripting tasks:
 
 All of the above tasks would take a lot of time to do by hand on a large scale, but using a computer program makes short work of the tasks. Not to mention it reduces the errors that creep in when doing boring, repetitive tasks by hand.
 
-## Computer Set-up
+## Computer setup
 You'll need Python and SQLite installed on your computer to work through the exercises. If you are using a Mac, then they are already installed.
 
 I strongly encourage you to use a package manager to install the software that's part of your CAR toolbox. On the Mac, Homebrew or MacPorts work fine. Installing either of those package managers will make your life so much easier. There appears to be a windows package manager too called Npackd (pronounced "unpacked"). I have no idea if it works, and would also encourage you to not use Windows.
@@ -42,13 +42,18 @@ I don't use Windows anymore so I'll be talking about "terminal" commands. On uni
 Couple quick conventions.
 
 * When you see a dollar sign it indicates a terminal prompt. So a command to see what directory you are in on your computer would be noted like so:
-```$ pwd```
+
+```
+$ pwd
+```
+
 The "$" indicates that at the command prompt, you enter "pwd" and hit enter.
 
-* When you see a pound sign it indicates a comment. I will try to comment as much as I can on terminal commands and python code so that you know what's going on. So, taking the above example, here's how I will write out comments from now on.
+* When you see a pound sign (#) it indicates a comment. I will try to comment as much as I can on terminal commands and python code so that you know what's going on. So, taking the above example, here's how I will write out comments from now on.
 
-$ pwd # print your current working directory so you know where you are in the file system. Here are the commands you'll use a lot:
 ```
+$ pwd # print your current working directory so you know where you are in the file system. Here are the commands you'll use a lot:
+
 cd directory_name # move into a folder called directory_name
 wc -l file_name # return the number of lines in a file called file_name
 pwd # print your current working directory
