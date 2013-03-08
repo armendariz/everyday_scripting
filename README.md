@@ -94,29 +94,50 @@ $ sudo apt-get install python-tk # for Ubuntu users, this allows us to cut and p
 
 The python virtualenv module lets us set-up a self-contained python programming environment that's isolated from the rest of the system. Let's create one now.
 
+```
 $ virtualenv –no-site-packages nicar_project
 $ cd nicar_project # move into the new directory created by virtualenv
 $ ls # check out the contents of the directory
 $ source bin/activate # activate the virtual environment. Notice the parenthesis at the far left.
+```
 
 You always have to activate your virtual environment when you want to use it, and you can tell that it is active when you see the name in parenthesis at the far left of the terminal prompt.
 
-$ mkdir project # make a folder or directory to hold our work and keep it separate from the other stuff $ cd project # move into the project folder just created.
+```
+$ mkdir project # make a folder or directory to hold our work and keep it separate from the other stuff
+$ cd project # move into the project folder just created.
 
 $ sudo apt-get install git-core # install cool-kid version control system Git
 $ git clone https://github.com/armendariz/everyday_scripting.git # check out the code used for this tutorial
-$ ls # list the contents of the current directory and see the new folder we just cloned from github. $ cd everyday_scripting # move into the new folder
-￼￼￼
+$ ls # list the contents of the current directory and see the new folder we just cloned from github.
+$ cd everyday_scripting # move into the new folder
+```
+
 Inside the folder we cloned from github you'll see a file called "requirements.txt" which has a list of python packages we want to install in order to do this tutorial.
 
+```
 $ pip install -r requirements.txt # install the requirements.
+```
 
-Now we are ready to rock and roll. We now have the computer all set-up and ready to do some work
+Now we are ready to rock and roll. We now have the computer all set-up and ready to do some work.
+
+```
 $ ipython # start-up ipython
-In [1]: from db_audit_trail import * # load the code from this script In [2]: do_it_do_it() # run the do_it_do_it function
+```
+```python
+In [1]: from db_audit_trail import * # load the code from this script
+In [2]: do_it_do_it() # run the do_it_do_it function
+```
+
 If you aren't sure what something is you can always check in Ipython by putting a question mark at the end and hitting return. If, for example, I wanted to know what the "csv" thing is that I'm importing at the top of the script I would do this:
+
+```python
 In [2]: csv?
+```
+
 Then I would see this:
+
+```
 Type: module
 Base Class: <type 'module'>
 String Form:<module 'csv' from
@@ -173,24 +194,33 @@ SETTINGS:
         csv.QUOTE_MINIMAL means only when required, for example, when a
             field contains either the quotechar or the delimiter
         csv.QUOTE_ALL means that quotes are always placed around fields.
+```
 
 When you're done reading it in Ipython it "q" on your keyboard to quit.
 
 You can also cut and paste code from the script into ipython and play around with it. If you want to see how the name parsing works, just cut and paste each line in and see what it does.
 
+```python
 In [3]: sql_select_command = ''' SELECT rowid, name_of_contributor
 FROM `%s_raw_contribs` WHERE employer <> '' AND occupation <> '' '''
 % date_stamp
-In [4]: execute_query = c.execute(sql_select_command) In [5]: rows = execute_query.fetchall()
+In [4]: execute_query = c.execute(sql_select_command)
+In [5]: rows = execute_query.fetchall()
+```
+
 Check out what's in the rows variable now. It's a list of rows. You can check how many rows are there using the len() function and can index into the rows like this: rows[0]
 Every list starts with 0, not 1.
 
+```python
 In [6]: len(rows)
 Out[6]: 43
+```
+
 So we have 43 rows returned by our query and contained in this python list. Each row in our list is a "tuple" which is basically just a list itself.
 
 Let's dissect the name parsing a bit.
 
+```python
 In [7]: row = rows[0]
 In [8]: row
 out[8]: (1, u'MR. GEORGE JOSEPH')
@@ -238,13 +268,16 @@ In [16]: parsed_name.first Out[16]: u'GEORGE'
 In [17]: parsed_name.middle Out[17]: u''
 In [18]: parsed_name.last Out[18]: u'JOSEPH'
 In [18]: parsed_name.suffix Out[18]: u''
-So you see, you can cut and past and play around with the code in the scripts so see how things work and hopefully adapt them to your needs. I crafted them as examples of things I do every day at work so I hope the examples will be of immediate use and provide concrete examples of the kinds of things scripts are great for.
+```
 
+So you see, you can cut and past and play around with the code in the scripts so see how things work and hopefully adapt them to your needs. I crafted them as examples of things I do every day at work so I hope the examples will be of immediate use and provide concrete examples of the kinds of things scripts are great for.
 
 Here are some resources to learn more and help you understand how python works. This is just what helped me out. There are many other good books out there.
 
-Couple of books:
-Just working through the first three chapters of this book will help a ton as you get started. "Think Python. How to Think Like a Computer Scientist," by Allen B. Downey http://www.greenteapress.com/thinkpython/
+## Couple of books:
+Just working through the first three chapters of this book will help a ton as you get started.
+
+"Think Python. How to Think Like a Computer Scientist," by Allen B. Downey http://www.greenteapress.com/thinkpython/
 "Think Stats. Probability and Statistics for Programmers," by Allen B. Downey, published by O'Reilly Media.
 
 http://www.greenteapress.com/thinkstats/
@@ -256,4 +289,5 @@ https://github.com/palewire https://github.com/datadesk
 There are a ton of smart and helpful people on GitHub and this is just a quick sampling of who I pay attention to.
 
 https://github.com/lukerosiak https://github.com/sunlightlabs https://github.com/aplayford
+
 Stack Overflow is a great resource for answeres to most problems you'll run into. Search it if you hit a wall. http://stackoverflow.com/
