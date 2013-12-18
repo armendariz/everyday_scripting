@@ -1,4 +1,10 @@
 requests
 ipython
 csvkit
-hg+http://code.google.com/p/python-nameparser/
+nameparser
+jinja2
+sphinx
+pyzmq
+pygments
+tornado
+nose
