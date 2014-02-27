@@ -32,7 +32,6 @@ for row in csv_reader:
 infile.close()
 
 
-
 la_data_url = 'ftp://ftp.bls.gov/pub/time.series/la/la.data.0.CurrentU10-14'
 urllib.urlretrieve(la_data_url, 'lea_data_u_10_14.csv')
 infile = open('lea_data_u_10_14.csv')
