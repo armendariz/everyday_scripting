@@ -4,7 +4,7 @@ import requests
 import StringIO
 import csv
 
-la_area_type_url = 'ftp://ftp.bls.gov/pub/time.series/la/la.area_type'
+la_area_type_url = 'http://download.bls.gov/pub/time.series/la/la.area_type'
 urllib.urlretrieve(la_area_type_url, 'lea_area_type.csv')
 infile = open('lea_area_type.csv')
 csv_reader = csv.reader(infile, delimiter='\t')
@@ -15,7 +15,7 @@ for row in csv_reader:
 infile.close()
 
 
-la_area_url = 'ftp://ftp.bls.gov/pub/time.series/la/la.area'
+la_area_url = 'http://download.bls.gov/pub/time.series/la/la.area'
 urllib.urlretrieve(la_area_url, 'lea_area.csv')
 infile = open('lea_area.csv')
 csv_reader = csv.reader(infile, delimiter='\t')
@@ -32,7 +32,7 @@ for row in csv_reader:
 infile.close()
 
 
-la_data_url = 'ftp://ftp.bls.gov/pub/time.series/la/la.data.0.CurrentU10-14'
+la_data_url = 'http://download.bls.gov/pub/time.series/la/la.data.0.CurrentU10-14'
 urllib.urlretrieve(la_data_url, 'lea_data_u_10_14.csv')
 infile = open('lea_data_u_10_14.csv')
 csv_reader = csv.reader(infile, delimiter='\t')
