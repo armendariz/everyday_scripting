@@ -4,6 +4,11 @@ import requests
 import StringIO
 import csv
 
+'''
+This is for example purposes only. You need to verify things are being parsed right.
+But this script does show one way to parse three different data sets and work with them all
+'''
+
 la_area_type_url = 'http://download.bls.gov/pub/time.series/la/la.area_type'
 urllib.urlretrieve(la_area_type_url, 'lea_area_type.csv')
 infile = open('lea_area_type.csv')
@@ -30,7 +35,6 @@ for row in csv_reader:
         'sort_sequence': row[5],
     }
 infile.close()
-
 
 la_data_url = 'http://download.bls.gov/pub/time.series/la/la.data.0.CurrentU10-14'
 urllib.urlretrieve(la_data_url, 'lea_data_u_10_14.csv')
@@ -73,7 +77,7 @@ data_headers = ['%s%s' % (datum['year'], datum['period']) for datum in v]
 headers = geo_headers + data_headers
 csv_writer.writerow(headers)
 for k,v in lk_data.items():
-    geo_code =  k.strip()[3:11]
+    geo_code =  k.strip()[3:18]
     name = lk_area[geo_code]['name']
     geo_type = lk_area_type[lk_area[geo_code]['type']]
     row = [k, geo_code, name, geo_type]
